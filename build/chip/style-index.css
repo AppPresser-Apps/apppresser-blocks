@@ -12,14 +12,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 4px;
+  padding: 4px 6px;
   border-radius: 25px;
 }
 
 .wp-block-apppresser-chip img {
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .wp-block-apppresser-chip .chip-label {
@@ -40,8 +40,8 @@
 
 .chip-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   -webkit-mask-size: cover !important;
           mask-size: cover !important;
 }
