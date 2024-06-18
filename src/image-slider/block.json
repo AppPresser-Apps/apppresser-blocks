@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "apppresser/image-slider",
+	"version": "0.1.0",
+	"title": "Image Slider",
+	"category": "apppresser",
+	"icon": "format-image",
+	"description": "Side scrolling image slider.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "image-slider",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"chip/index.css","mappings":";;;AAAA;;;;EAAA,C","sources":["webpack://blobs/./src/chip/editor.scss"],"sourcesContent":["/**\n * The following styles get applied inside the editor only.\n *\n * Replace them with your own styles or remove the file completely.\n */\n\n.wp-block-apppresser-chip {\n\t\n}\n"],"names":[],"sourceRoot":""}
