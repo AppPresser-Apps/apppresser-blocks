@@ -82,7 +82,7 @@ if ( is_admin() ) {
 
 		require 'plugin-update/plugin-update-checker.php';
 		$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-			'https://github.com/apppresser/apppresser-blocks',
+			'https://github.com/AppPresser-Apps/apppresser-blocks',
 			__FILE__,
 			'apppresser-blocks'
 		);
