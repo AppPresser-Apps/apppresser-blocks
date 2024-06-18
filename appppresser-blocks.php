@@ -5,7 +5,7 @@
  * Description:       Mobile optimized blocks.
  * Requires at least: 6.5
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            AppPresser
  * Author URI:        https://apppresser.com
  * License:           GPL-2.0-or-later
