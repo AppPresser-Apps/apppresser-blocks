@@ -9,21 +9,24 @@
  */
 .wp-block-apppresser-chip {
   display: inline-flex;
+  border-radius: 25px;
+}
+
+.wp-block-apppresser-chip .chip-inner {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 4px 6px;
-  border-radius: 25px;
 }
 
-.wp-block-apppresser-chip img {
-  border-radius: 50%;
-  width: 20px;
+.wp-block-apppresser-chip .chip-inner > div {
   height: 20px;
 }
 
-.wp-block-apppresser-chip .chip-label {
+.wp-block-apppresser-chip .chip-inner .chip-label {
   font-size: 12px;
+  line-height: 20px;
   padding: 0 6px;
 }
 

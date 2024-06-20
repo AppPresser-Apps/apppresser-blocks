@@ -20,9 +20,9 @@
 			"type": "string",
 			"default": "Chip Label"
 		},
-		"avatar": {
+		"slot": {
 			"type": "string",
-			"default": ""
+			"default": "end"
 		},
 		"icon": {
 			"type": "string",

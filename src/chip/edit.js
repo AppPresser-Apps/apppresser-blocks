@@ -65,35 +65,27 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(icon) => setAttributes({ icon })}
 						help={__('Select the chip icon.', 'apppresser-blocks')}
 					></SelectControl>
-					<label class="label-uppercase">{__('Avatar', 'apppresser-blocks')}</label>
-					<PanelRow>
-						<div>
-							<MediaUpload
-								onSelect={(media) => setAttributes({ avatar: media.url })}
-								allowedTypes={['image']}
-								value={attributes.avatar}
-								multiple={false}
-								render={({ open }) => (
-									<>
-									<img src={attributes.avatar}></img>
-									<button class="components-button is-primary is-small" onClick={open}>
-										{attributes.avatar === null
-										? 'Upload'
-										: 'Replace Image'}
-									</button>
-									<p class="label-description">Uploaded image will be used before chip label</p>
-									</>
-								)}
-							>
-								
-							</MediaUpload>
-						</div>
-					</PanelRow>
+					<SelectControl
+						label={__('Chip Placement', 'apppresser-blocks')}
+						value={attributes.slot}
+						options={[
+							{ label: 'Start', value: 'start' },
+							{ label: 'End', value: 'end' }
+						]}
+						onChange={(slot) => setAttributes({ slot })}
+						help={__('Select the chip placement.', 'apppresser-blocks')}
+					></SelectControl>
 				</PanelBody>
 			</InspectorControls>
-			{ attributes.avatar && <img src={attributes.avatar}></img> }
-			{ attributes.label !== '' && <div class="chip-label">{attributes.label}</div> }
-			{ data && attributes.icon !== 'none' &&  <span class={`chip-icon`} style={{mask: `url(${data.url}/wp-content/plugins/apppresser-blocks/assets/ionicons/${attributes.icon}.svg)`, maskSize: 'cover', backgroundColor: `var(--wp--preset--color--${attributes.textColor}, #ffffff)` }}></span> }
+			<div class="chip-inner">
+				<div>
+					{ data && attributes.icon !== 'none' && attributes.slot == 'start' &&  <div class={`chip-icon`} style={{mask: `url(${data.url}/wp-content/plugins/apppresser-blocks/assets/ionicons/${attributes.icon}.svg)`, maskSize: 'cover', backgroundColor: `var(--wp--preset--color--${attributes.textColor}, #ffffff)` }}></div> }
+				</div>
+				{ attributes.label !== '' && <div class="chip-label">{attributes.label}</div> }
+				<div>
+					{ data && attributes.icon !== 'none' && attributes.slot === 'end' && <div class={`chip-icon`} style={{mask: `url(${data.url}/wp-content/plugins/apppresser-blocks/assets/ionicons/${attributes.icon}.svg)`, maskSize: 'cover', backgroundColor: `var(--wp--preset--color--${attributes.textColor}, #ffffff)` }}></div> }
+				</div>
+			</div>
 		</div>
 	);
 }
